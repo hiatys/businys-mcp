@@ -1,0 +1,53 @@
+{
+  "name": "@businys/mcp-server",
+  "version": "1.0.0",
+  "description": "Official MCP server for Businys — 221 tools across 26 practices for independent professionals",
+  "main": "dist/index.js",
+  "bin": {
+    "businys-mcp": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsup",
+    "prepublishOnly": "tsup",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@hiatys/kits": "workspace:*",
+    "@hiatys/mcp": "workspace:*",
+    "@hiatys/mcp-tools": "workspace:*",
+    "@modelcontextprotocol/sdk": "^1.12.1"
+  },
+  "devDependencies": {
+    "@hiatys/config": "workspace:*",
+    "@types/node": "^20",
+    "tsup": "^8",
+    "typescript": "^5"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "mcp",
+    "modelcontextprotocol",
+    "businys",
+    "freelance",
+    "independent-professional",
+    "practice-management",
+    "ai-agent"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hiatys/businys-mcp.git"
+  },
+  "homepage": "https://github.com/hiatys/businys-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/hiatys/businys-mcp/issues"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
+}
