@@ -1,0 +1,18 @@
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    properties:
+      apiKey:
+        type: string
+        description: "Your Businys API key. Generate one in Settings → Integrations → API Keys."
+    required:
+      - apiKey
+  commandFunction: |-
+    (config) => ({
+      command: "npx",
+      args: ["-y", "@businys/mcp-server"],
+      env: {
+        HIATYS_API_KEY: config.apiKey
+      }
+    })
